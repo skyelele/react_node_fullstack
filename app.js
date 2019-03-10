@@ -1,9 +1,6 @@
-function sum (a, b) {
-    return a + b;
-}
+// console.log("PROCESS: ", process);
+const helpers = require('./helpers');
 
 // var let const
-
-const total = sum(10, 200);
-
+const total = helpers.sum(10, 200);
 console.log("TOTAL: " + total);
