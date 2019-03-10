@@ -1,6 +1,11 @@
-// console.log("PROCESS: ", process);
-const helpers = require('./helpers');
+const fs = require("fs");
+const fileName = "target.txt";
 
-// var let const
-const total = helpers.sum(10, 200);
-console.log("TOTAL: " + total);
+const errHandler = err => console.log(err);
+const dataHandler = data => console.log(data.toString());
+fs.readFile(fileName, (err, data) => {
+    if (err) errHandler(err);
+    dataHandler(data);
+});
+
+console.log("Node js async programming ... ?");
